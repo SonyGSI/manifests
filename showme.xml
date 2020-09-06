@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<manifest>
-
-  <remote  name="github"
-           fetch="ssh://git@github.com"
-           revision="refs/heads/android-10" />
-
-  <project path="device/showme/gsi" name="ShowMeGSI/device-showme-gsi" remote="github" />
-</manifest>

@@ -1,30 +1,18 @@
-# Show Me GSI
+# Sony GSI
 
-[Generic System Image](https://source.android.com/setup/build/gsi) optimized for Sony and Xiaomi devices. Currently tested:
+[Generic System Image](https://source.android.com/setup/build/gsi) optimized for Sony devices. Currently tested:
 
-- Sony Xperi XZ2 (akari)
-- Xiaomi Redmi Note 9 Pro (joyeuse)
-
-Other devices should work, including:
-
-- Xiaomi Redmi Note 9S (curtana)
+- Sony Xperia 10 ii (pdx201)
 
 ## Downloads
 
 Ensure your device has the latest factory image and is unlocked with the following tools:
 
-### Sony
-
 - [Sony Flash Tool](https://developer.sony.com/develop/open-devices/get-started/flash-tool)
-
-### Xiaomi
-- [Xiaomi Flash Tool](https://www.xiaomiflash.com/)
-- [Xiaomi Stock ROMs](https://c.mi.com/oc/miuidownload/)
-- [Xiaomi Fastboot Restore](https://c.mi.com/oc/miuidownload/detail?guide=2)
 
 ## Build Box
 
-```
+```sh
 apt-get -y install --no-install-recommends \
     bison \
     flex \
@@ -39,13 +27,16 @@ apt-get -y install --no-install-recommends \
 
 ### Initialize
 
-```
-repo init -u https://android.googlesource.com/platform/manifest -b android-10.0.0_r36
-git clone git@github.com:ShowMeGSI/manifests.git .repo/local_manifests
+```sh
+repo init -u https://android.googlesource.com/platform/manifest -b android-10.0.0_r41
+git clone -b android-10.0.0_r41 git@github.com:SonyGSI/manifests.git .repo/local_manifests
 repo sync
 ```
 
 ### Build
+
+```sh
 . build/envsetup.sh
 lunch
 make -j8
+```
