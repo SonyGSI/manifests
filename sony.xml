@@ -3,7 +3,7 @@
 
   <remote  name="github"
            fetch="ssh://git@github.com"
-           revision="refs/heads/android-10.0.0_r41" />
+           revision="refs/heads/android-11.0.0_r3" />
 
   <project path="device/sony/gsi" name="SonyGSI/device-sony-gsi" remote="github" />
 </manifest>
